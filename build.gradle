@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'com.spacetravel'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.hibernate:hibernate-core:5.4.27.Final'
+    implementation 'com.h2database:h2:1.4.200'
+    implementation 'org.flywaydb:flyway-core:7.10.0'
+    implementation 'javax.persistence:javax.persistence-api:2.2'
+    testImplementation 'junit:junit:4.13.1'
+}
+
+application {
+    mainClass = 'com.spacetravel.TestApplication'
+}
+
+test {
+    useJUnitPlatform()
+}
