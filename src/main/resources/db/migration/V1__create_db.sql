@@ -1,4 +1,3 @@
-
 CREATE TABLE client (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(200) NOT NULL
@@ -19,4 +18,3 @@ CREATE TABLE ticket (
     FOREIGN KEY (from_planet_id) REFERENCES planet(id),
     FOREIGN KEY (to_planet_id) REFERENCES planet(id)
 );
-                        

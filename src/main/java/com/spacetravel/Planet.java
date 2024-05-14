@@ -1,11 +1,13 @@
 package com.spacetravel;
 
 import javax.persistence.*;
+import javax.validation.constraints.Pattern;
 
 @Entity
 @Table(name = "planet")
 public class Planet {
     @Id
+    @Pattern(regexp = "[A-Z0-9]+", message = "ID must contain only uppercase letters and digits")
     @Column(name = "id", nullable = false, length = 10)
     private String id;
 
@@ -28,4 +30,3 @@ public class Planet {
         this.name = name;
     }
 }
-                        

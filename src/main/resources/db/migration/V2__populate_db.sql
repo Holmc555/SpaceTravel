@@ -1,4 +1,3 @@
-
 INSERT INTO client (name) VALUES ('Alice');
 INSERT INTO client (name) VALUES ('Bob');
 INSERT INTO client (name) VALUES ('Charlie');
@@ -23,7 +22,6 @@ INSERT INTO ticket (created_at, client_id, from_planet_id, to_planet_id) VALUES 
 INSERT INTO ticket (created_at, client_id, from_planet_id, to_planet_id) VALUES (NOW(), 5, 'EARTH', 'JUP');
 INSERT INTO ticket (created_at, client_id, from_planet_id, to_planet_id) VALUES (NOW(), 6, 'JUP', 'SAT');
 INSERT INTO ticket (created_at, client_id, from_planet_id, to_planet_id) VALUES (NOW(), 7, 'MARS', 'VEN');
-INSERT INTO ticket (created_at, client_id, from_planet_id, to_planet_id) VALUES (NOW(), 8, 'VEN', 'EARTH');
-INSERT INTO ticket (created_at, client_id, from_planet_id, to_planet_id) VALUES (NOW(), 9, 'EARTH', 'SAT');
+INSERT INTO ticket (created_at, client_id, from_planет_id, to_planet_id) VALUES (NOW(), 8, 'VEN', 'EARTH');
+INSERT INTO ticket (created_at, client_id, from_planет_id, to_planet_id) VALUES (NOW(), 9, 'EARTH', 'SAT');
 INSERT INTO ticket (created_at, client_id, from_planet_id, to_planet_id) VALUES (NOW(), 10, 'MARS', 'EARTH');
-                        
