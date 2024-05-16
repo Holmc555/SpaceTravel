@@ -2,6 +2,7 @@ package com.spacetravel;
 
 import javax.persistence.*;
 import javax.validation.constraints.Pattern;
+import java.util.Set;
 
 @Entity
 @Table(name = "planet")
@@ -13,6 +14,12 @@ public class Planet {
 
     @Column(name = "name", nullable = false, length = 500)
     private String name;
+
+    @OneToMany(mappedBy = "fromPlanet", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<Ticket> ticketsFrom;
+
+    @OneToMany(mappedBy = "toPlanet", cascade = CascadeType.ALL, orphanRemoval = true)
+    private Set<Ticket> ticketsTo;
 
     public String getId() {
         return id;
@@ -28,5 +35,21 @@ public class Planet {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Set<Ticket> getTicketsFrom() {
+        return ticketsFrom;
+    }
+
+    public void setTicketsFrom(Set<Ticket> ticketsFrom) {
+        this.ticketsFrom = ticketsFrom;
+    }
+
+    public Set<Ticket> getTicketsTo() {
+        return ticketsTo;
+    }
+
+    public void setTicketsTo(Set<Ticket> ticketsTo) {
+        this.ticketsTo = ticketsTo;
     }
 }
